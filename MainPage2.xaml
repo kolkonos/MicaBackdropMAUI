@@ -8,14 +8,12 @@
     <StackLayout BackgroundColor="Transparent">
         <Label Text="This is the second page"
                HorizontalOptions="CenterAndExpand" />
-               <!--VerticalOptions="CenterAndExpand"--> 
         <ScrollView Background="Transparent">
             <StackLayout Padding="10" BackgroundColor="Transparent">
                 <Frame Style="{StaticResource CardStyle}">
                     <StackLayout Orientation="Horizontal" Spacing="10">
                         <Label Text="Show Navbar" VerticalOptions="Center" />
                         <Switch x:Name="menu_switch"  Toggled="Switch_Toggled" VerticalOptions="Center" />
-                        <!--<Switch Toggled="Switch_Toggled" VerticalOptions="Center" />-->
                     </StackLayout>
                 </Frame>
                 <Frame Style="{StaticResource CardStyle}">
