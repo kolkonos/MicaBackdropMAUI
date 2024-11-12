@@ -3,6 +3,55 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:MicaBackdropMAUI.WinUI">
+    xmlns:local="using:MicaBackdropMAUI.WinUI" 
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls">
 
+    <maui:MauiWinUIApplication.Resources>
+        <Style TargetType="controls:NavigationView">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="controls:NavigationView">
+                        <Grid x:Name="RootGrid">
+                            <Grid>
+                                <SplitView x:Name="RootSplitView" >
+                                    <SplitView.Content>
+                                        <!--<Grid x:Name="ContentGrid" 
+                                              BorderBrush="{ThemeResource NavigationViewContentGridBorderBrush}" 
+                                              BorderThickness="{ThemeResource NavigationViewContentGridBorderThickness}" 
+                                              Background="{ThemeResource NavigationViewContentBackground}" 
+                                              Margin="{ThemeResource NavigationViewContentMargin}" 
+                                              CornerRadius="{ThemeResource NavigationViewContentGridCornerRadius}"/>-->
+                                        <Grid x:Name="ContentGrid">
+                                            <Grid.Background>
+                                                <SolidColorBrush Opacity="0" />
+                                            </Grid.Background>
+                                        </Grid>
+                                    </SplitView.Content>
+                                </SplitView>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--<Style TargetType="controls:NavigationViewItem">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="controls:NavigationViewItem">
+                        <Grid x:Name="NVIRootGrid">
+                            <FlyoutBase.AttachedFlyout>
+                                <Flyout x:Name="ChildrenFlyout" Placement="RightEdgeAlignedTop">
+                                    <Grid x:Name="FlyoutRootGrid">
+                                        <Grid x:Name="FlyoutContentGrid" />
+                                    </Grid>
+                                </Flyout>
+                            </FlyoutBase.AttachedFlyout>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+    </maui:MauiWinUIApplication.Resources>
 </maui:MauiWinUIApplication>

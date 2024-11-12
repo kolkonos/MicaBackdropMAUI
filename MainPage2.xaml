@@ -6,10 +6,8 @@
              BackgroundColor="Transparent">
 
     <StackLayout BackgroundColor="Transparent">
-        <Label Text="This is the second page"
-               HorizontalOptions="CenterAndExpand" />
         <ScrollView Background="Transparent">
-            <StackLayout Padding="10" BackgroundColor="Transparent">
+            <StackLayout Padding="0" BackgroundColor="Transparent">
                 <Frame Style="{StaticResource CardStyle}">
                     <StackLayout Orientation="Horizontal" Spacing="10">
                         <Label Text="Show Navbar" VerticalOptions="Center" />
